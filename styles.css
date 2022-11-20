@@ -37,7 +37,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    column-gap: 10rem;
+    column-gap: 5rem;
 }
 
 .nav-links {
@@ -45,6 +45,13 @@ body {
     justify-content: space-between;
     align-items: center;
     column-gap: 2rem;
+    position: relative;
+    transition: right 1s ease-in-out;
+}
+
+.close-menu {
+    display: none;
+    cursor: pointer;
 }
 
 .nav-link {
@@ -68,14 +75,13 @@ body {
 .left-side {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: stretch;
     align-items: center;
     flex-basis: 70%;
 }
 
 .left-side-image {
     width: 100%;
-    align-self: center;
     margin-bottom: 1.5rem;
 }
 
@@ -164,8 +170,9 @@ body {
 }
 
 .topic-img img {
+    max-height: 200px;
     width: 100%;
-    height: auto;
+    object-fit: contain;
 }
 
 .topic-data {
@@ -187,4 +194,206 @@ body {
     color: var(--Dark-grayish-blue);
     font-size: 0.9rem;
     line-height: 1.4rem;
+}
+
+.resp-menu {
+    display: none;
+    cursor: pointer;
+}
+
+/* BREAKPOINTS */
+@media screen and (max-width: 1024px) {
+    body {
+        padding: 50px 80px;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+
+    .left-side {
+        flex-basis: 60%;
+    }
+
+    .right-side {
+        flex-basis: 40%;
+    }
+
+    .left-side-title {
+        font-size: 2.5rem;
+    }
+
+    .left-side-text {
+        font-size: .9rem;
+    }
+
+    .left-side-btn {
+        font-size: 0.6rem;
+    }
+
+    .right-side-title {
+        font-size: 1.8rem;
+    }
+
+    .New {
+        margin: 25px 0;
+    }
+
+    .New h3{
+        font-size: 1rem;
+    }
+
+    .New p {
+        font-size: 0.8rem;
+    }
+
+    .topic-data h2 {
+        font-size: 1.4rem;
+    }
+
+    .topic-data h3 {
+        font-weight: 700;
+        font-size: 1rem;
+        margin: .7rem 0;
+    }
+
+    .topic-data p {
+        font-size: .8rem;
+        line-height: 1.1rem;
+    }
+
+    .topic {
+        column-gap: 1rem;
+    }
+
+    .topic-img {
+        flex-basis: 40%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 50px 80px;
+    }
+
+    .resp-menu {
+        display: block;
+    }
+
+    .resp-menu i {
+        font-size: 2rem;
+    }
+
+    .resp-menu:hover i {
+        color: var(--Soft-orange);
+    }
+
+    .nav-links {
+        position: fixed;
+        flex-direction: column;
+        background-color: var(--Very-dark-blue);
+        width: 50%;
+        height: 100vh;
+        right: -100%;
+        top: 0;
+        align-items: start;
+        justify-content: start;
+        padding: 220px 50px;
+        row-gap: 2rem;
+    }
+
+    .nav-link {
+        color: var(--Off-white);
+    }
+
+    .nav-link:hover {
+        color: var(--Soft-orange);
+    }
+
+    .close-menu {
+        display: block;
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        color: var(--Off-white);
+        font-size: 30px;
+        font-weight: 100;
+    }
+
+    .close-menu:hover {
+        color: var(--Soft-orange);
+    }
+
+    .main-side {
+        flex-direction: column;
+        row-gap: 3rem;
+    }
+
+    .Topics-side {
+        flex-direction: column;
+        align-items: stretch;
+        row-gap: 1rem;
+    }
+
+    .topic-img img{
+        max-height: 150px;
+    }
+}
+
+.active {
+    right: 0;
+}
+
+.left-side-image-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 425px) {
+    body {
+        padding: 50px;
+    }
+
+    .left-side-image {
+        display: none;
+    }
+
+    .left-side-image-mobile {
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .left-side-data {
+        flex-direction: column;
+        text-align: start;
+    }
+
+    .left-side-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .nav-links {
+        width: 60%;
+    }
+
+    .topic-data h3 {
+        margin: .2rem 0;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        padding: 50px 40px;
+    }
+
+    .navbar {
+        column-gap: 5rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .navbar {
+        column-gap: 5rem;
+    }
 }

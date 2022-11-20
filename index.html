@@ -6,19 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <title>News</title>
 </head>
 <body>
     <header>
         <nav class="navbar">
             <a href="#"><img src="assets/images/logo.svg" alt="Website Logo" class="Logo"></a>
-            <ul class="nav-links">
+            <ul class="nav-links" id="nav-links">
+                <div class="close-menu">
+                    <i class="fa-solid fa-x" id="close-menu"></i>
+                </div>
                 <li ><a href="#" class="nav-link">Home</a></li>
                 <li ><a href="#" class="nav-link">New</a></li>
                 <li ><a href="#" class="nav-link">Popular</a></li>
                 <li ><a href="#" class="nav-link">Trending</a></li>
-                <li ><a href="#" class="nav-link">Categories</a></li>
+                <li ><a href="#" class="nav-link">Categories</a></li>        
             </ul>
+            <div class="resp-menu">
+                <i class="fa-solid fa-bars toggle-menu" id="toggle-menu"></i>
+            </div>
         </nav>
     </header>
 
@@ -26,6 +33,7 @@
         <section class="main-side">
             <section class="left-side">
                 <img src="assets/images/image-web-3-desktop.jpg" alt="Main image" class="left-side-image">
+                <img src="assets/images/image-web-3-mobile.jpg" alt="" class="left-side-image-mobile">
                 <div class="left-side-data">
                     <h1 class="left-side-title">The Bright Future of web 3.0?</h1>
                     <div class="left-side-article">
@@ -58,8 +66,8 @@
         </section>
         <section class="Topics-side">
             <div class="topic">
-                <div class="topic-img">
-                    <img src="assets/images/image-retro-pcs.jpg" alt="retro pcs image" >
+                <div class="topic-img" id="first-img">
+                    <img src="assets/images/image-retro-pcs.jpg" alt="">
                 </div>
                 <div class="topic-data">
                     <h2>01</h2>
@@ -69,8 +77,8 @@
             </div>
 
             <div class="topic">
-                <div class="topic-img">
-                    <img src="assets/images/image-top-laptops.jpg" alt="retro pcs image" >
+                <div class="topic-img" id="second-img">
+                    <img src="assets/images/image-top-laptops.jpg" alt="">
                 </div>
                 <div class="topic-data">
                     <h2>02</h2>
@@ -80,8 +88,8 @@
             </div>
 
             <div class="topic">
-                <div class="topic-img">
-                    <img src="assets/images/image-gaming-growth.jpg" alt="retro pcs image" >
+                <div class="topic-img" id="third-img">
+                    <img src="assets/images/image-gaming-growth.jpg" alt="">
                 </div>
                 <div class="topic-data">
                     <h2>03</h2>
